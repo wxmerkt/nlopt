@@ -234,6 +234,9 @@ namespace nlopt {
       forced_stop_reason = f.forced_stop_reason;
       return *this;
     }
+    bool is_initialized() {
+      return (o == NULL);
+    }
 
     // Do the optimization:
     result optimize(std::vector<double> &x, double &opt_f) {
